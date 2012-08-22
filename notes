@@ -1,0 +1,18 @@
+mkdir myproject
+cd myproject
+git init # or git clone
+touch README.md # create this also while creating git repo
+touch package.json
+touch server.js
+mkidr public
+touch public/index.html
+mkdir public/js
+touch public/js/app.js
+npm init
+npm install --save p1 p2 p3 # --save creates node_modules folder within project dir
+echo 'node_modules' > .gitignore
+vim server.js
+git add .
+git commit -m 'intial commit'
+git remote add origin 'https://github.com/ekanna/myproject.git # if cloned, not required
+git push -u origin master

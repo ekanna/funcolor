@@ -8,6 +8,9 @@ var vfs = vfsLocal({root: __dirname + '/public/'});
 
 var server = http.createServer(stack(
 	creationix.log(),
+	function (req, res, next){
+		//middle ware
+	},
 	vfsHttpAdapter('/', vfs)
 )).listen(8080, function() {
 	console.log("running at http://localhost:8080");
